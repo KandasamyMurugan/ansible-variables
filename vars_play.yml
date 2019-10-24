@@ -5,3 +5,8 @@
       file:  
         name: "{{ working_dir }}"
         state: directory
+    - name: write service_list file
+      lineinfile:
+        path: "{{ working_dir }}/services.txt"
+        line: "{{ service_list }}"
+      
