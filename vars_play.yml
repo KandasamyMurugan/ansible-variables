@@ -19,7 +19,7 @@
         create: yes
         line: "{{ service_list }}"
     - name: View share property
-      command: ls -la "{{ nfs_dir['nfs']['cifs'] }}"
+      command: ls -la "{{ share_paths['nfs']['cifs'] }}"
       register: cmd_output
     - name: write command module output to file
       copy:
