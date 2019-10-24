@@ -10,4 +10,7 @@
         path: "{{ working_dir }}/services.txt"
         create: yes
         line: "{{ service_list }}"
+    - name: View share property
+      command: ls -la "{{ share_paths['nfs'] }}"
+      register: cmd_output
       
