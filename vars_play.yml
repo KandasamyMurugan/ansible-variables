@@ -5,6 +5,12 @@
       file:  
         name: "{{ working_dir }}"
         state: directory
+    - name: create nfs directory
+      file: "{{ nfs_dir }}"
+      state: directory
+    - name: create cifs directory
+      file: "{{ cifs_dir }}"
+      state: directory
     - name: write service_list file
       lineinfile:
         path: "{{ working_dir }}/services.txt"
