@@ -1,5 +1,6 @@
 --- # Ansible Facts example
 - hosts: web
+  gather_facts: yes
   tasks:
     - name: create file
       lineinfile:
