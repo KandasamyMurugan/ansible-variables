@@ -12,9 +12,3 @@ service_list:
 - mariadb
 
 
-###Directorny variable.
-
-share_paths:
-  nfs: /mnt/nfs
-  cifs: /mnt/cifs
-  iscsi: /mnt/iscsi
