@@ -24,4 +24,4 @@
     - name: write command module output to file
       copy:
         content: "{{ cmd_output }}"
-        dest: "{{ working_dir }}/cmd output.txt"      
+        dest: "{{ working_dir }}/cmd_output.txt"      
