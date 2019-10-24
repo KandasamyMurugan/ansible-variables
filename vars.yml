@@ -1,8 +1,7 @@
 ###Single Key and Value Variables
 
 working_dir: /home/cloud_user/working
-nfs_dir: /mnt/nfs
-cifs_dir: /mnt/cifs
+
 
 
 ###Key and List of values
@@ -12,3 +11,9 @@ service_list:
 - mariadb
 
 
+###Directorny variable.
+
+share_paths:
+  nfs: /mnt/nfs
+  cifs: /mnt/cifs
+  iscsi: /mnt/iscsi

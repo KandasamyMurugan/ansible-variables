@@ -7,11 +7,11 @@
         state: directory
     - name: create nfs directory
       file: 
-        name: "{{ nfs_dir }}"
+        path: /mnt/nfs
         state: directory        
     - name: create cifs directory
       file: 
-        name: "{{ cifs_dir }}"
+        path: /mnt/cifs
         state: directory
     - name: write service_list file
       lineinfile:
@@ -19,7 +19,7 @@
         create: yes
         line: "{{ service_list }}"
     - name: View share property
-      command: ls -la "{{ share_paths['nfs']['cifs'] }}"
+      command: ls -la "{{ nfs_dir['nfs']['cifs'] }}"
       register: cmd_output
     - name: write command module output to file
       copy:
