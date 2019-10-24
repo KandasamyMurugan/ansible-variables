@@ -8,5 +8,6 @@
     - name: write service_list file
       lineinfile:
         path: "{{ working_dir }}/services.txt"
+        create: yes
         line: "{{ service_list }}"
       
