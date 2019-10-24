@@ -10,4 +10,4 @@
     - name: access magic variable
       lineinfile:
         path: /home/cloud_user/hostname
-        line: "{{ hostvars['kmurugan1c']['ansible_default_ipv4']['address']['ansible_default_ipv4']['gateway'] }}"
+        line: "{{ hostvars['kmurugan1c']['ansible_default_ipv4']['address']['gateway'] }}"
