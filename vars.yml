@@ -1,0 +1,17 @@
+#Single Key and Value Variables
+working_dir: /home/cloud_user/working
+
+
+#Key and List of values
+service_list:
+- httpd
+- nfs
+- mariadb
+
+
+#Directorny variable.
+
+share_paths:
+  nfs: /mnt/nfs
+  cifs: /mnt/cifs
+  iscsi: /mnt/iscsi
