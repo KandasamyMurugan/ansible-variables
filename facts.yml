@@ -1,6 +1,8 @@
 --- # Ansible Facts example
 - hosts: web
   tasks:
-    path: /home/cloud_user/hostname
-    create: yes
-    line: "{{ ansible_hostname }}"
+    - name: create file
+      lineinfile:
+        path: /home/cloud_user/hostname
+        create: yes
+        line: "{{ ansible_hostname }}"
