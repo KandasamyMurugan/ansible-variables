@@ -13,4 +13,7 @@
     - name: View share property
       command: ls -la "{{ share_paths['nfs'] }}"
       register: cmd_output
-      
+    - name: write command module output to file
+      copy:
+        content: "{{ cmd_output }}"
+        dest: "{{ working_dir }}/cmd output.txt"      
