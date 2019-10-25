@@ -8,5 +8,5 @@
         path: "{{ target_file }}"
       register: hostname
     - name: Rename hostname when found
-      command: mv "{{ target_file }}" /home/ansible/net-info
+      command: mv "{{ target_file }}" /home/cloud_user/net-info
       when: hostname.stat.exists
