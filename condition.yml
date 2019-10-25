@@ -11,8 +11,8 @@
       command: mv "{{ target_file }}" /home/cloud_user/net-info
       when: hostname.stat.exists
 
-- hosts: Debain
+- hosts: debian
   tasks:
     - name: "shutdown debian flavored systems"
       command: /sbin/shutdown -t now
-      when: ansible_facts['ansible_os_family'] == "Debian"
+      when: ansible_facts['ansible_os_family'] == "debian"
