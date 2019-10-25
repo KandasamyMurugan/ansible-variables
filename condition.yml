@@ -14,5 +14,5 @@
 - hosts: debian
   tasks:
     - name: "shutdown debian flavored systems"
-      command: /sbin/shutdown -t now
+      command: /sbin/reboot -t now
       when: ansible_facts['os_family'] == "Debian"
