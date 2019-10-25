@@ -10,3 +10,9 @@
     - name: Rename hostname when found
       command: mv "{{ target_file }}" /home/cloud_user/net-info
       when: hostname.stat.exists
+
+- hosts: debain
+  tasks:
+    - name: "shutdown debian flavored systems"
+      command: /sbin/shutdown -t now
+      when: ansible_facts['os_family'] == "Debian"
