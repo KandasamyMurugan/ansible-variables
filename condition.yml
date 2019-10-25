@@ -1,5 +1,5 @@
 --- # Ansible Conditional example
-- hosts: web
+- hosts: all
   vars:
     target_file: /home/cloud_user/hostname
   tasks:
